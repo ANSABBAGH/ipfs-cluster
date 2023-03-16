@@ -324,6 +324,10 @@ If you prefer faster adding, add directly to the local IPFS and trigger a
 					Value: defaultAddParams.ReplicationFactorMax,
 					Usage: "Sets the maximum replication factor for pinning this file",
 				},
+				cli.BoolFlag{
+					Name: "stream-channel, sc",
+					Usage: `specify the channel to use for streaming responses.`
+				},
 				// TODO: Uncomment when sharding is supported.
 				// cli.BoolFlag{
 				//	Name:  "shard",
@@ -374,6 +378,7 @@ If you prefer faster adding, add directly to the local IPFS and trigger a
 				p.Recursive = c.Bool("recursive")
 				p.Layout = c.String("layout")
 				p.Chunker = c.String("chunker")
+				p.StreamChannel = c.Bool("stream-channel")
 				p.RawLeaves = c.Bool("raw-leaves")
 				p.Hidden = c.Bool("hidden")
 				p.Wrap = c.Bool("wrap-with-directory") || len(paths) > 1
