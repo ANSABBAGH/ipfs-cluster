@@ -326,7 +326,7 @@ If you prefer faster adding, add directly to the local IPFS and trigger a
 				},
 				cli.BoolFlag{
 					Name: "stream-channel, sc",
-					Usage: `specify the channel to use for streaming responses.`
+					Usage: `specify the channel to use for streaming responses.`,
 				},
 				// TODO: Uncomment when sharding is supported.
 				// cli.BoolFlag{
